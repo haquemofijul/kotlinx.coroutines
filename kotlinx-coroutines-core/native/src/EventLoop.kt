@@ -64,7 +64,6 @@ internal class ShareableEventLoop(
         return ref.get().interceptContinuation(continuation)
     }
 
-    @InternalCoroutinesApi
     override fun releaseInterceptedContinuation(continuation: Continuation<*>) {
         checkCurrentThread()
         ref.get().releaseInterceptedContinuation(continuation)
